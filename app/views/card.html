@@ -1,0 +1,64 @@
+<div class="container-fluid">
+  <div class="row equal">
+      <div class="col-xs-12 col-md-3">
+      <div class="panel panel-default input-panel" id="InputList">
+        <div class="panel-body">
+          <div class="btn btn-droppable btn-block" ng-repeat="item in list5" data-drop="true" ng-model='list5' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=list5])'}"  jqyoui-droppable="{index: {{$index}}}">
+          <div class="btn btn-info btn-draggable  btn-block" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="list5" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true,onDrag:'dragged'}" ng-hide="!item.title">{{item.title}}</div>
+          </div>
+        </div>
+      
+      </div>
+     
+    </div>
+    <div class="col-xs-12 col-md-3">
+      <div class="panel panel-primary" id="List1">
+        <div class="panel-heading">
+          <h1 class="panel-title text-center">List1</h1>
+        </div>
+        <div class="panel-body">
+            <div class="thumbnail" data-drop="true" ng-model='list2' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=list2])'}"  jqyoui-droppable="{multiple:true,onDrop:'dropped'}">
+          <div class="buttonHolder">
+            <div class="btn btn-info btn-draggable btn-block" ng-repeat="item in list2" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="list2" jqyoui-draggable="{index: {{$index}},animate:true,onDrag:'dragged'}">{{item.title}}</div>
+          </div>
+        </div>
+        </div>
+      
+      </div>
+     
+    </div>
+    <!-- begin panel 2 -->
+    <div class="col-xs-12  col-md-3">
+      <div  class="panel panel-primary" id="List2">
+        <div class="panel-heading">
+          <h1 class="panel-title">List2</h1>
+        </div>
+        <div class="panel-body">
+         <div class="thumbnail" data-drop="true" ng-model='list3' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=list3])'}"  jqyoui-droppable="{multiple:true,onDrop:'dropped'}">
+          <div class="buttonHolder">
+            <div class="btn btn-info btn-draggable btn-block" ng-repeat="item in list3" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="list3" jqyoui-draggable="{index: {{$index}},animate:true,onDrag:'dragged'}">{{item.title}}</div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-3" ng-show="admin">
+      <div class="panel panel-primary" id="List3">
+        <div class="panel-heading">
+          <h1 class="panel-title">List3</h1>
+        </div>
+        <div class="panel-body">
+          <div class="thumbnail" data-drop="true" ng-model='list4' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=list4])'}"  jqyoui-droppable="{multiple:true,onDrop:'dropped' }">
+          <div class="buttonHolder">
+            <div class="btn btn-info btn-draggable btn-block" ng-repeat="item in list4" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="list4" jqyoui-draggable="{index: {{$index}},animate:true,onDrag:'dragged'}">{{item.title}}</div>
+          </div>
+        </div>
+        </div>
+        <!-- end panel-body -->
+      </div>
+      <!-- end  panel-primary -->
+    </div>
+    <!-- end col-md-4 -->
+  </div>
+  <!-- end row -->
+</div>

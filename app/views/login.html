@@ -1,0 +1,20 @@
+<div class="container">
+<div class="jumbotron">
+    <p>There are two users in the system. admin/password is admin profile and user/password is user profile</p> 
+</div>
+
+<form class="horizontal" name="userForm"  ng-submit="submit()">
+<div class="form-group">
+<span ng-show="userForm.$dirty && userForm.username.$error.invaliduser"><i class="glyphicon glyphicon-info-sign"> </i>Invalid UserName or Password</span>
+</div>
+<div class="form-group">
+	<input type="text" class="form-control" required placeholder="username" name="username" ng-model="username" />
+</div>
+<div class="form-group">
+	<input type="password" class="form-control" required placeholder="password" name="password" ng-model="password" />
+</div>
+<div class="form-group">
+	<button type="submit" class="btn btn-primary">Login</button>
+</div>
+</form>
+</div>
